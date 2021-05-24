@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://movie-afterthoughts.herokuapp.com/",
+  baseURL: "https://zd-movie-afterthoughts.herokuapp.com/",
 });
