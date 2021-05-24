@@ -7,9 +7,7 @@ const LikedPosts = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.title}>
-        <h1>Liked Posts</h1>
-      </div>
+      <div className={classes.title}>Liked Posts</div>
       <div className={classes.postList}>
         <PostList likedPosts={true} />
       </div>

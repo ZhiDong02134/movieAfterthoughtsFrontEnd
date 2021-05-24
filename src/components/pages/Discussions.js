@@ -8,9 +8,7 @@ const Discussions = () => {
   return (
     <>
       <div className={classes.root}>
-        <div className={classes.title}>
-          <h1>Recent Posts</h1>
-        </div>
+        <div className={classes.title}>Recent Posts</div>
         <div className={classes.postList}>
           <PostList />
         </div>

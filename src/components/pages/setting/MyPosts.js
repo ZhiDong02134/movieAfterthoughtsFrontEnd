@@ -8,9 +8,7 @@ const MyPosts = () => {
   return (
     <>
       <div className={classes.root}>
-        <div className={classes.title}>
-          <h1>My Posts</h1>
-        </div>
+        <div className={classes.title}>My Posts</div>
         <div className={classes.postList}>
           <PostList myPosts={true} />
         </div>
