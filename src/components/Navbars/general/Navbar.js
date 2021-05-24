@@ -40,14 +40,15 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700,
     fontSize: "1.1rem",
     background:
-      "-webkit-linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%)",
+      "linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%)",
+    backgroundClip: "text",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
   },
 }));
 
-const Navbar = ({ create = false, ...props }) => {
-  const classes = useStyles(props);
+const Navbar = ({ create = false }) => {
+  const classes = useStyles();
   const dispatch = useDispatch();
 
   return (
@@ -59,23 +60,17 @@ const Navbar = ({ create = false, ...props }) => {
               Movie Afterthoughts
             </Link>
           </Typography>
+
           {!create ? (
-            <Button
-              className={classes.btn}
-              component={Link}
-              to="/create"
-              color="inherit">
-              Create Post
+            <Button component={Link} to="/create" color="inherit">
+              <div className={classes.btn}>Create Post</div>
             </Button>
           ) : null}
           <IconButton component={Link} to="/setting">
             <PersonIcon />
           </IconButton>
-          <Button
-            className={classes.btn}
-            onClick={() => dispatch(logOut())}
-            color="inherit">
-            Log out
+          <Button onClick={() => dispatch(logOut())} color="inherit">
+            <div className={classes.btn}>Log out</div>
           </Button>
         </Toolbar>
       </AppBar>
