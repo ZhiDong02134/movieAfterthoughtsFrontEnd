@@ -69,3 +69,5 @@ Distributed under the MIT License. See [LICENSE](https://github.com/danny1233211
 * [Netlify](https://www.netlify.com/ "Netlify")
 
 * [Heroku](https://www.heroku.com/ "Heroku")
+
+* [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction "The Movie Database")
