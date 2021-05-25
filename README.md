@@ -6,9 +6,9 @@ Where movie lovers can post their reviews for movies and interact with other mov
 
 ## Snapshots
 
-![Landing Page](src/readmeImg/Landing1.png)
+![Landing Page 1](src/readmeImg/Landing1.png)
 
-![Landing Page](src/readmeImg/Landing2.png)
+![Landing Page 2](src/readmeImg/Landing2.png)
 
 ## Getting Started
 
@@ -50,7 +50,7 @@ After completing the steps above, you would have finished setting up the fronten
 
 ## License
 
-Distributed under the MIT License. See ```LICENSE``` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/danny1233211/moviesAfterthoughtsFrontEnd/blob/main/LICENSE.md) for more information.
 
 ## Acknowledgements
 
