@@ -46,9 +46,11 @@ After completing the steps above, you would have finished setting up the fronten
 
 * [Redux](https://redux.js.org/ "Redux")
 
-## Acknowledgements
+## License
 
----
+Distributed under the MIT License. See ```LICENSE``` for more information.
+
+## Acknowledgements
 
 * [formik](https://formik.org/ "formik")
 
