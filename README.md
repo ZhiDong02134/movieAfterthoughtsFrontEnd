@@ -2,6 +2,8 @@
 
 Where movie lovers can post their reviews for movies and interact with other movie fanatics.
 
+[Visit Site](https://hopeful-perlman-44b33e.netlify.app "Movie Afterthoughts")
+
 ## Snapshots
 
 ![Landing Page](src/readmeImg/Landing1.png)
