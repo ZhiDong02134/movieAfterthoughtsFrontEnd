@@ -71,7 +71,7 @@ const EditPost = ({ post = "", setShowHeading }) => {
           dispatch(editPost(postId, values));
           setSubmitting(false);
           resetForm();
-          history.push("/discussion");
+          history.push("/myposts");
         }, 1000);
       }}>
       {({ isSubmitting }) => (
@@ -118,7 +118,7 @@ const EditPost = ({ post = "", setShowHeading }) => {
                 className={classes.cancel}
                 disabled={isSubmitting}
                 color="secondary"
-                onClick={() => history.push("/discussion")}>
+                onClick={() => history.push("/myposts")}>
                 Cancel
               </Button>
             </Form>
