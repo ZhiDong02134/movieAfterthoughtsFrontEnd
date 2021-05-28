@@ -3,8 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { Form, Formik } from "formik";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import { Link, Redirect } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 import Icon from "@material-ui/core/Icon";
@@ -96,7 +94,6 @@ const Login = () => {
                     ),
                   }}
                 />
-
                 <Button
                   type="submit"
                   fullWidth
