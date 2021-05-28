@@ -13,13 +13,16 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   btn: {
-    width: "20rem",
-    height: "2rem",
+    height: "16rem",
+    width: "16rem",
+    borderRadius: "50%",
+    fontSize: "1.7rem",
+    fontFamily: "'Nanum Pen Script', cursive",
   },
   warningIcon: {
     marginBottom: "-0.3rem",
     marginRight: "0.5rem",
-    color: "red",
+    color: "#FF0000",
   },
 }));
 
