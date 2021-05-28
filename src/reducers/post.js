@@ -9,6 +9,7 @@ import {
   POST_ERROR,
   DELETE_POST,
   EDIT_POST,
+  DELETE_COMMENT,
 } from "../actions/types";
 
 const initialState = {
@@ -24,10 +25,16 @@ const postReducer = (state = initialState, action) => {
   switch (type) {
     case CREATE_POST:
     case GET_POSTS:
-    case EDIT_POST:
       return {
         ...state,
         posts: payload,
+      };
+    case EDIT_POST:
+      return {
+        ...state,
+        posts: state.posts.map(post =>
+          post.id === payload.id ? payload : post
+        ),
       };
     case LIKE_POST:
     case UNLIKE_POST:
@@ -51,6 +58,11 @@ const postReducer = (state = initialState, action) => {
       return {
         ...state,
         posts: state.posts.filter(post => post.id !== payload),
+      };
+    case DELETE_COMMENT:
+      return {
+        ...state,
+        comments: state.comments.filter(comment => comment.id !== payload),
       };
     default:
       return state;

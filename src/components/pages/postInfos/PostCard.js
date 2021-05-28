@@ -30,6 +30,7 @@ import {
 } from "../../../actions/post";
 import Comment from "./Comment";
 import PostDetails from "./PostDetails";
+import EditPost from "./EditPost";
 
 const PostCard = ({
   post,
@@ -39,12 +40,14 @@ const PostCard = ({
   liked,
   likeCount,
   myPosts = false,
+  setShowHeading,
 }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
   const [expandComments, setExpandComments] = useState(false);
   const [openChatbox, setOpenChatbox] = useState(false);
+  const [editPost, setEditPost] = useState(false);
   const [commentDetails, setCommentDetails] = useState("");
 
   const postDate = format(parseISO(post.updatedAt), "L/d/y h:mm:ssa");
@@ -79,9 +82,16 @@ const PostCard = ({
   const renderComments = postComments.map(comment => {
     const commentor = comment.firstName + " " + comment.lastName;
     const commentDate = format(parseISO(comment.updatedAt), "L/d/y h:mm:ssa");
+
+    let myComment = false;
+    if (comment.userId === userId) myComment = true;
+
     return (
+      //
       <div className={classes.comment} key={comment.id}>
         <Comment
+          commentId={comment.id}
+          myComment={myComment}
           commentor={commentor}
           commentDate={commentDate}
           commentDetails={comment.commentDetails}
@@ -90,7 +100,9 @@ const PostCard = ({
     );
   });
 
-  return (
+  return editPost ? (
+    <EditPost post={post} setShowHeading={setShowHeading} />
+  ) : (
     <Card className={classes.root}>
       <div className={classes.head}>
         <CardHeader
@@ -118,7 +130,9 @@ const PostCard = ({
         />
         {myPosts ? (
           <div className={classes.editDeleteIcons}>
-            <IconButton className={classes.editBtn}>
+            <IconButton
+              className={classes.editBtn}
+              onClick={() => setEditPost(true)}>
               <EditIcon />
             </IconButton>
             <IconButton

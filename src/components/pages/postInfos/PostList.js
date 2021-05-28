@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const PostList = ({ myPosts = false, likedPosts = false }) => {
+const PostList = ({ myPosts = false, likedPosts = false, setShowHeading }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const {
@@ -67,6 +67,7 @@ const PostList = ({ myPosts = false, likedPosts = false }) => {
         key={post.id}
         likeCount={likeCount}
         myPosts={myPosts}
+        setShowHeading={setShowHeading}
       />
     );
   });

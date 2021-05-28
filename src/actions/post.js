@@ -11,6 +11,7 @@ import {
   POST_ERROR,
   DELETE_POST,
   EDIT_POST,
+  DELETE_COMMENT,
 } from "./types";
 
 export const createPost = values => async dispatch => {
@@ -37,10 +38,10 @@ export const createPost = values => async dispatch => {
 };
 
 export const editPost =
-  ({ values, postId }) =>
+  (postId = "", values = {}) =>
   async dispatch => {
     try {
-      const { data } = await user.post(`/posts/${postId}`, values);
+      const { data } = await user.patch(`/posts/${postId}`, values);
 
       dispatch({
         type: EDIT_POST,
@@ -165,6 +166,31 @@ export const addComment = values => async dispatch => {
     error.response.data.errors.forEach(e =>
       commentStatus(e.message, 2000, true)
     );
+  }
+};
+
+export const deleteComment = commentId => async dispatch => {
+  try {
+    await user.delete(`/comments/${commentId}`);
+
+    dispatch({
+      type: DELETE_COMMENT,
+      payload: commentId,
+    });
+
+    postStatus("Comment deleted successfully");
+  } catch (error) {
+    dispatch({
+      type: POST_ERROR,
+      payload: {
+        message: error.response.data.errors,
+        status: error.response.status,
+      },
+    });
+
+    error.response.status === 400
+      ? postStatus(error.response.data.errors, null, true)
+      : postStatus("Unable to delete post", null, true);
   }
 };
 

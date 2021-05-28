@@ -17,3 +17,4 @@ export const DELETE_USER = "DELETE_USER";
 export const DELETE_USER_FAIL = "DELETE_USER_FAIL";
 export const DELETE_POST = "DELETE_POST";
 export const EDIT_POST = "EDIT_POST";
+export const DELETE_COMMENT = "DELETE_COMMENT";
