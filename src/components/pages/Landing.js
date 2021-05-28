@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Navbar from "../Navbars/landing/Navbar";
-import CopyRight from "../general/Copyright";
+import Copyright from "../general/Copyright";
 
 const Landing = () => {
   const { isAuthenticated } = useSelector(state => state.user);
@@ -29,7 +29,7 @@ const Landing = () => {
               without flavor." -Eleanor Roosevelt
             </p>
             <div className="copyRight">
-              <CopyRight landing={true} />
+              <Copyright landing={true} />
             </div>
           </div>
         </div>

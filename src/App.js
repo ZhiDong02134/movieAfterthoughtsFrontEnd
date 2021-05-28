@@ -14,6 +14,7 @@ import CreatePost from "./components/pages/CreatePost";
 import Setting from "./components/pages/setting/Setting";
 import MyPosts from "./components/pages/setting/MyPosts";
 import LikedPosts from "./components/pages/setting/LikedPosts";
+import Attributions from "./components/general/Attributions";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/" exact component={Landing} />
           <Route path="/register" exact component={Register} />
           <Route path="/login" exact component={Login} />
+          <Route path="/attributions" exact component={Attributions} />
           <PrivateRoute path="/discussion" exact component={Discussions} />
           <PrivateRoute
             hide={true}
