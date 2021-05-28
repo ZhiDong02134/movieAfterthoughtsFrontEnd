@@ -1,8 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import DeleteIcon from "@material-ui/icons/Delete";
+import { IconButton, Typography, CardContent, Card } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
+
+import { deleteComment } from "../../../actions/post";
 
 const useStyles = makeStyles({
   root: {
@@ -36,17 +38,45 @@ const useStyles = makeStyles({
     marginTop: "-0.75rem",
     marginLeft: "-0.75rem",
   },
+  comment: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  deleteIcon: {
+    marginTop: "-1.5rem",
+    marginRight: "-1rem",
+    color: "#ff0000",
+  },
 });
 
-const Comment = ({ commentDate, commentor, commentDetails }) => {
+const Comment = ({
+  commentId,
+  myComment,
+  commentDate,
+  commentor,
+  commentDetails,
+}) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const handleDeleteComment = id => {
+    dispatch(deleteComment(id));
+  };
 
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent className={classes.content}>
-        <Typography className={classes.commentDetails} component="p">
-          {commentDetails}
-        </Typography>
+        <div className={classes.comment}>
+          <Typography className={classes.commentDetails} component="p">
+            {commentDetails}
+          </Typography>
+          {myComment ? (
+            <IconButton
+              className={classes.deleteIcon}
+              onClick={() => handleDeleteComment(commentId)}>
+              <DeleteIcon />
+            </IconButton>
+          ) : null}
+        </div>
         <Typography className={classes.name} gutterBottom>
           {commentor}
         </Typography>
