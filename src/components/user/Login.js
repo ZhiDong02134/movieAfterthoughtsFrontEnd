@@ -96,11 +96,7 @@ const Login = () => {
                     ),
                   }}
                 />
-                {/* Doesn't do anything, just for the look :) */}
-                <FormControlLabel
-                  control={<Checkbox value="remember" color="primary" />}
-                  label="Remember me"
-                />
+
                 <Button
                   type="submit"
                   fullWidth
