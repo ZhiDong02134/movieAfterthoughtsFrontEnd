@@ -2,7 +2,7 @@
 
 Where movie lovers can post their reviews for movies and interact with other movie fanatics.
 
-[Visit Site](https://hopeful-perlman-44b33e.netlify.app "Movie Afterthoughts")
+[Visit Site](https://movieafterthoughts.me "Movie Afterthoughts")
 
 ## Snapshots
 
@@ -36,17 +36,16 @@ After completing the steps above, you would have finished setting up the fronten
 
 ## Built With
 
-* [Reactjs](https://reactjs.org/ "Reactjs")
+- [Reactjs](https://reactjs.org/ "Reactjs")
 
-* [Node](https://nodejs.org/ "Node")
+- [Node](https://nodejs.org/ "Node")
 
-* [Express](https://expressjs.com/ "Express")
+- [Express](https://expressjs.com/ "Express")
 
-* [MySQL](https://www.mysql.com/ "MySQL")
-  
-* [Material-ui](https://material-ui.com/ "Material-ui")
+- [MySQL](https://www.mysql.com/ "MySQL")
+- [Material-ui](https://material-ui.com/ "Material-ui")
 
-* [Redux](https://redux.js.org/ "Redux")
+- [Redux](https://redux.js.org/ "Redux")
 
 ## License
 
@@ -54,20 +53,18 @@ Distributed under the MIT License. See [LICENSE](https://github.com/danny1233211
 
 ## Acknowledgements
 
-* [formik](https://formik.org/ "formik")
+- [formik](https://formik.org/ "formik")
 
-* [yup](https://www.npmjs.com/package/yup "yup")
-  
-* [bcryptjs](https://www.npmjs.com/package/bcryptjs "bcryptjs")
+- [yup](https://www.npmjs.com/package/yup "yup")
+- [bcryptjs](https://www.npmjs.com/package/bcryptjs "bcryptjs")
 
-* [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken "jsonwebtoken")
-  
-* [date-fns](https://www.npmjs.com/package/date-fns "date-fns")
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken "jsonwebtoken")
+- [date-fns](https://www.npmjs.com/package/date-fns "date-fns")
 
-* [axios](https://www.npmjs.com/package/axios "axios")
+- [axios](https://www.npmjs.com/package/axios "axios")
 
-* [Netlify](https://www.netlify.com/ "Netlify")
+- [Netlify](https://www.netlify.com/ "Netlify")
 
-* [Heroku](https://www.heroku.com/ "Heroku")
+- [Heroku](https://www.heroku.com/ "Heroku")
 
-* [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction "The Movie Database")
+- [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction "The Movie Database")
