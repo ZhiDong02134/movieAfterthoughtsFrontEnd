@@ -20,7 +20,7 @@ Installation:
 npm install
 ```
 
-To Start Frondend:
+To Start Frontend:
 
 ```bash
 npm start
